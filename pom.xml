@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>at.diwh</groupId>
+  <artifactId>diwhCryptoTool</artifactId>
+  <version>1.0.1.1</version>
+  
+  <properties>
+  	<bouncycastle.version>1.66</bouncycastle.version>
+	<diwhutils.version>1.0.11.4</diwhutils.version>
+    <jdk.version>11</jdk.version>
+  </properties>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>org.bouncycastle</groupId>
+  		<artifactId>bcprov-jdk15on</artifactId>
+  		<version>${bouncycastle.version}</version>
+  		<scope>provided</scope>
+	</dependency>
+	<dependency>
+  		<groupId>at.diwh.utils</groupId>
+  		<artifactId>diwhUtils</artifactId>
+  		<version>${diwhutils.version}</version>
+  		<scope>provided</scope>
+	</dependency>
+   </dependencies>
+  
+  <build>
+    <sourceDirectory>src/java</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+ 			<source>${jdk.version}</source>
+        	<target>${jdk.version}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
